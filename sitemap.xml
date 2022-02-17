@@ -8,33 +8,48 @@
 
 
 <url>
-  <loc>https://satyammohla.me/</loc>
-  <lastmod>2020-09-09T00:20:00+00:00</lastmod>
+  <loc>https://satyammohla.com/</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://satyammohla.me/index.html</loc>
-  <lastmod>2020-09-09T00:20:00+00:00</lastmod>
+  <loc>https://satyammohla.com/index.html</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://satyammohla.me/research.html</loc>
-  <lastmod>2020-09-09T00:20:00+00:00</lastmod>
+  <loc>https://satyammohla.com/research.html</loc>
+  <lastmod>2022-02-17T19:13:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://satyammohla.me/projects.html</loc>
-  <lastmod>2020-09-09T00:20:00+00:00</lastmod>
+  <loc>https://satyammohla.com/engagements.html</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://satyammohla.me/awards.html</loc>
-  <lastmod>2020-09-09T00:20:00+00:00</lastmod>
+  <loc>https://satyammohla.com/service.html</loc>
+  <lastmod>2022-02-17T19:13:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://satyammohla.me/assets/projects/MSI_interIIT_2018.pdf</loc>
-  <lastmod>2020-09-09T00:20:00+00:00</lastmod>
+  <loc>https://satyammohla.com/awards.html</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://satyammohla.com/assets/files/satyam_thesis_abstract.pdf</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://satyammohla.com/assets/files/ura03.txt</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://satyammohla.com/assets/projects/MSI_interIIT_2018.pdf</loc>
+  <lastmod>2022-02-17T19:13:55+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
