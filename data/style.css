@@ -751,3 +751,10 @@ li {
     margin-left: -1%;
     margin-bottom: 0
 }
+
+
+/* General Type */
+
+h1, h2, h3, h4, h5, h6{color:#2f2f2f; font-family:"Ubuntu",arial;}
+.bold{font-weight:bold;}
+.blue{color:#4086c6;}
