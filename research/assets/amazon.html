@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-container {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Multimodal Noisy Segmentation based fragmented burn scars identification in Amazon Rainforest</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="./fitcnn_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./fitcnn_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./fitcnn_files/codemirror.min.css">
+    <link rel="stylesheet" href="./fitcnn_files/app.css">
+
+    <link rel="stylesheet" href="./fitcnn_files/bootstrap.min.css">
+
+    <script src="./fitcnn_files/jquery.min.js.download"></script>
+    <script src="./fitcnn_files/bootstrap.min.js.download"></script>
+    <script src="./fitcnn_files/codemirror.min.js.download"></script>
+    <script src="./fitcnn_files/clipboard.min.js.download"></script>
+
+    <script src="./fitcnn_files/app.js.download"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center" class="text-left">
+                <b>Multimodal Noisy Segmentation based fragmented burn <br> scars identification in Amazon Rainforest<br>
+                    <small>
+                        IEEE International Conference on Systems, Man, and Cybernetics, 2020 (Oral Presentation) <br>
+                        Harvard CRCS AI for Social Good Workshop, 2020
+                    </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="../../index.html">
+                            <br>Satyam Mohla</a>
+                        <br>Honda Innovation Lab Akasaka, Tokyo <br> &amp; IIT Bombay, India
+                        <a href="mailto:satyammohla@gmail.com">
+                            <br>satyammohla@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://sidmohla.com/">
+                            <br>Sidharth Mohla</a>
+                        <br>Nvidia Research India <br> &amp; IIT Hyderabad, India
+                        <a href="mailto:sidmohla@gmail.com">
+                            <br>sidmohla@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://anupamguha.com/">Anupam Guha</a>
+                        <br> IIT Bombay, India<br>&nbsp; <br>&nbsp;
+                    </li>
+                    <li>
+                        <a href="https://biplab-banerjee.github.io/">
+                            Biplab Banerjee
+                        </a>
+                        <br> IIT Bombay, India<br>&nbsp; <br>&nbsp;
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://arxiv.org/abs/2009.04634">
+                            <img src="./fitcnn_files/arXivPaper.PNG" height="60px">
+                            <h4><strong>arXiv</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9283432">
+                            <img src="./fitcnn_files/ieeePaper.PNG" height="60px">
+                            <h4><strong>IEEE</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./fitcnn_files/presentation.pdf">
+                            <img src="./fitcnn_files/presentationicon.PNG" height="60px">
+                            <h4><strong>Presentation</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./fitcnn_files/posterSD.jpg">
+                            <img src="./fitcnn_files/ICASSP22icon.jpg" height="60px">
+                            <h4><strong>Poster</strong></h4>
+                        </a>
+                    </li>
+                    <!--<li>
+                        <a href="">
+                            <img src="./fitcnn_files/ICASSP22icon.jpg" height="60px">
+                            <h4><strong>Poster</strong></h4>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <img src="./fitcnn_files/amazon_gustavo.jpg" height="325px">
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <br>
+                    Burnings around BR-163 highway, Para,
+                    northern Brazil, in Amazon region. Used with permission from G.Basso, 2019.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Detection of burn marks due to wildfires in inaccessible rain forests is important for various disaster management and ecological studies. The fragmented nature of arable landscapes and diverse cropping patterns often thwart the precise mapping of burn scars. Recent advances in remote-sensing and availability of multimodal data offer a viable solution to this mapping problem. However, the task to segment burn marks is difficult because of its indistinguishably with similar looking land patterns, severe fragmented nature of burn marks and partially labelled noisy datasets. In this work we present AmazonNET -- a convolutional based network that allows extracting of burn patters from multimodal remote sensing images. The network consists of UNet: a well-known encoder decoder type of architecture with skip connections commonly used in biomedical segmentation. The proposed framework utilises stacked RGB-NIR channels to segment burn scars from the pastures by training on a new weakly labelled noisy dataset from Amazonia. Our model illustrates superior performance by correctly identifying partially labelled burn scars and rejecting incorrectly labelled samples, demonstrating our approach as one of the first to effectively utilise deep learning based segmentation models in multimodal burn scar identification.
+                </p>
+            </div>
+        </div>
+
+
+        <!--
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:0%;">
+
+                        <iframe width="750" height="425" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Result
+                </h3>
+                <img src="../../research/aisg_gif.gif" height="275px">
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <br>
+                    The network correctly segments burn scars, rejecting incorrectly labelled spots and correctly identifying partially labelled or unlabelled
+                    samples. (a) Visible Channel (b) Near Infrared channel (false coloured hsv) (c) Available Labels (including partial/ incorrect labels) (d) Predicted Burn Scars
+                    (e) Binary Burn Scars. The black contour in (a) & (b) denote contour for labelled data(c) for easy visualisation. Yellow boxes denote burn scars which are
+                    correctly labelled or unlabelled. White boxes denote mislabelled/misidentified burn scars
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supported by:
+                </h3>
+            </div>
+        </div>
+            
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://www.microsoft.com/en-us/ai/ai-for-earth">
+                            <img src="./fitcnn_files/microsoft.jpg" height="170px">
+                            <h4><strong>Microsoft AI for Earth Grant 2020</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.shastriinstitute.org">
+                            <img src="./fitcnn_files/sici.jpg" height="120px">
+                            <h4><strong>Shastri Indo-Canadian Institute SRSF Fellowship 2019</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation:
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+
+                    <div class="CodeMirror cm-s-default CodeMirror-wrap">
+                        <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div>
+                        <div class="CodeMirror-vscrollbar" cm-not-content="true">
+                            <div style="min-width: 1px; height: 0px;"></div>
+                        </div>
+                        <div class="CodeMirror-hscrollbar" cm-not-content="true">
+                            <div style="height: 100%; min-height: 1px; width: 0px;"></div>
+                        </div>
+                        <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                        <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                        <div class="CodeMirror-scroll" tabindex="-1">
+                            <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 13px; min-height: 128px; padding-right: 0px; padding-bottom: 0px;">
+                                <div style="position: relative; top: 0px;">
+                                    <div class="CodeMirror-lines">
+                                        <div style="position: relative; outline: none;">
+                                            <div class="CodeMirror-code" style="">
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">@article{mohla2020multimodal,</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  title={Multimodal Noisy Segmentation based fragmented burn <br> &amp; scars identification in Amazon Rainforest},</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  author={Satyam Mohla, Sidharth Mohla, Anupam Guha and Biplab Banerjee</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  journal={2020 IEEE International Conference on <br> Systems, Man, and Cybernetics (SMC)},</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  pages={4122--4126},</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> &nbsp;  year={2020}</span></pre>
+                                                <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">}</span></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; height: 13px; width: 1px; top: 128px;"></div>
+                            <div class="CodeMirror-gutters" style="display: none; height: 141px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+Authors thank Prof. Subhasis Chaudhuri, IIT Bombay &amp; Paulo Fernando Ferreira Silva Filho, Institute for Advanced Studies, Brazil for discussion and productive comments. Authors thank <a href="https://www.gustavobasso.com/"> Gustavo Basso </a> for giving us permission to use illustrated figure above freely, & for drawing attention to the wildfires in Amazonia. This work was partially completed as part of TechForSociety initiative, in which authors volunteered their efforts outside the scope of their official duties at no cost. <a href="../../index.html">Satyam Mohla</a> and <a href="https://sidmohla.com/">Sidharth Mohla</a> acknowledge recognition from Microsoft for AI for Earth Grant &amp; Shastri Indo-Canadian Institute for SRSF research fellowship. The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
